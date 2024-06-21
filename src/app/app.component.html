@@ -1,13 +1,13 @@
+<div>
+  Start Date : {{ date | date : "MMM dd yyyy" }}
+  <!-- {{data | keyvalue}} -->
+</div>
+<div *Ngfor="let pair of data | keyvalue">{{ pair.key }} {{ pair.value }}</div>
 
 <div>
-@for (house of houses; track $index) {
-  <app-hosue
-    [house] = "house"
-    [index] = "$index"
-  >
-  </app-hosue>
-}
-
+  @for (house of houses | slice: 1:5; track $index) {
+  <app-hosue [house]="house" [index]="$index"> </app-hosue>
+  }
 </div>
 
 <router-outlet />

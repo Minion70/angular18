@@ -1,6 +1,18 @@
 <div class="house" [ngClass]="houseClass()">
+  <!-- [ngStyle]="houseStyle()" -->
   <img [src]="house.photo" alt="house.title" />
   <h3 class="title">{{ index + 1 }}. {{ house.title }}</h3>
   <p class="city">{{ house.city }}</p>
   <button>Apply to buy</button>
+  <div class="house-level">
+    @switch (house.level) { @case('A') {
+    <div class="level">A level</div>
+    } @case('B') {
+    <div class="level">B level</div>
+    } @case('C') {
+    <div class="level">C level</div>
+    } @default {
+    <div class="level">Unknown</div>
+    } }
+  </div>
 </div>

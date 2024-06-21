@@ -3,4 +3,5 @@ export interface House {
   title: string;
   city: string;
   photo?: string;
+  level: string;
 }
